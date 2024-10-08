@@ -79,7 +79,6 @@ with mlflow.start_run(run_name="RandomForest_Model"):
     mlflow.log_metric("mse", mse_rf)
     mlflow.log_metric("r2", r2_rf)
     mlflow.sklearn.log_model(model_rf, "random_forest_model")
-    mlflow.log_artifact("feat_importance_rf.png")
 
     print(f'RandomForest Mean Squared Error: {mse_rf}')
     print(f'RandomForest R-squared: {r2_rf}')
@@ -99,7 +98,6 @@ with mlflow.start_run(run_name="LinearRegression_Model"):
     mlflow.log_metric("mse", mse_lr)
     mlflow.log_metric("r2", r2_lr)
     mlflow.sklearn.log_model(model_lr, "linear_regression_model")
-    mlflow.log_artifact("linear_regression_feat_importance.png")
 
     print(f'LinearRegression Mean Squared Error: {mse_lr}')
     print(f'LinearRegression R-squared: {r2_lr}')
